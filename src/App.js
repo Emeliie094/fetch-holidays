@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Months from './components/Months';
 
 function App() {
+
+  //Todays date
+  const currentDate = new Date().getDate()
+  const currentMonth = new Date().toLocaleString('en-US', { month: 'long' })
+  const currentYear = new Date().getFullYear()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Public Holidays 2022</h1>
+      <h3>Today's date:</h3>
+      <p>{`${currentDate} ${currentMonth} ${currentYear}`}</p>
+      <h2>Chose month</h2>
+      <Months />
     </div>
   );
 }

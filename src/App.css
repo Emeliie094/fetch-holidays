@@ -2,10 +2,60 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.months {
+  margin: 0px;
+  padding: 8px;
+text-align: left;
+overflow: auto;
+white-space: nowrap;
+padding-right: 8px;
 }
+
+.months > h3{
+  margin: 0 16px 16px;
+}
+
+.months-container{
+  padding: 8px 0;
+  display: flex;
+
+}
+
+.holidays{
+  display: flex;
+
+  margin: 20px ;
+  background-color: #8ecaff44;
+
+}
+
+.holidays > p:first-child{
+font-weight: bold;
+margin: 16px;
+}
+
+.card{
+  min-width: 200px;
+  height: 200px;
+  margin: 0 16px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 15px;
+  background-color: #8ecaff;
+  color: white;
+  font-size: 2rem;
+  border: none;
+}
+
+.card > p{
+  margin: 0 0 8px 8px;
+}
+
+.card:hover{
+  cursor: pointer;
+  background-color: #77abda;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
