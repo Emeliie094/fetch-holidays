@@ -23,7 +23,7 @@ function Months() {
         console.log(slicedIndex)
 
         var result = holidays.filter(function (el) {
-            return el.date.slice(5, 7) == slicedIndex
+            return el.date.slice(5, 7) === slicedIndex
         })
 
         setPublicHolidays(result)
@@ -33,7 +33,7 @@ function Months() {
     useEffect(() => {
         setPublicHolidays(publicHolidays)
         // console.log(publicHolidays)
-    })
+    }, [publicHolidays])
 
 
     return (
